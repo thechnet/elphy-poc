@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav&family=Ubuntu+Mono&display=swap');
+
+body {
+	font-family: 'Yantramanav', sans-serif;
+	margin: 0;
+}
+
+figcaption {
+	font-size: small;
+}
+
+td, th {
+	padding-right: 2em;
+}
+
+.inline {
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: large;
+}
+
+a {
+	margin-left: .1em;
+	color: darkred;
+}
+a::after {
+	content: "🡕";
+	font-size: smaller;
+	display: inline-block;
+	margin-left: .2em;
+}
+
+/* ------ elphy.js ------ */
+
+#controls {
+	background-color: silver;
+	padding: 15px;
+}
+
+#controls button {
+	all: unset;
+	background-color: white;
+	padding: 2px 10px 2px 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#controls button:hover {
+	background-color: black;
+	color: white;
+}
+#controls button:disabled {
+	cursor: default;
+	background-color: lightgray;
+	color: silver;
+}
+
+#controls label[for=toggleAdvanced] {
+	pointer-events: none;
+	margin-right: 3px;
+}
+
+#controls input[type=checkbox] {
+	appearance: none;
+	margin: 0;
+	margin-right: 15px;
+	width: 1.15em;
+	height: 1.15em;
+	background-color: white;
+	border-radius: 0.3em;
+	transform: translateY(.1em);
+	cursor: pointer;
+}
+#controls input[type=checkbox]:hover {
+	background-color: lightgray;
+}
+#controls input[type=checkbox]:checked::before {
+	position: absolute;
+	transform: translateX(.28em) translateY(-0.01em);
+	content: "✕";
+	font-weight: bolder;
+	font-size: smaller;
+}
+
+#controlsAdvanced {
+	visibility: hidden;
+}
+
+#controlsAdvanced input[type=range] {
+	width: 60px;
+	appearance: none;
+	height: 5px;
+	border-radius: 5px;
+	background-color: gray;
+	vertical-align: middle;
+	transform: translateY(-.1em);
+	margin-right: 15px;
+	cursor: ew-resize;
+}
+
+#controlsAdvanced input[type=range]::-webkit-slider-thumb {
+	appearance: none;
+	width: 10px;
+	height: 15px;
+	background-color: white;
+	border-radius: 5px;
+}
+#controlsAdvanced input[type=range]:hover::-webkit-slider-thumb {
+	background-color: lightgray;
+}
+
+.more, .extra {
+	display: none;
+}
+@media (min-width: 850px) {
+	.more {
+		display: inline;
+	}
+}
+@media (min-width: 1200px) {
+	.extra {
+		display: inline;
+	}
+}
+@media (max-width: 600px) {
+	#controlsAdvanced, #toggleAdvanced {
+		display: none;
+	}
+}
+
+#entities {
+	margin: 15px;
+}

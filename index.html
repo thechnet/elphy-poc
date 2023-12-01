@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<title>ISO 8601</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="controls">
+		<button id="toggleSimulation" onclick="field.toggleSimulation();">Start</button>
+		<button id="applyImpulse" onclick="field.addImpulse();" disabled>Impuls</button>
+		<label for="toggleAdvanced" class="more">Erweitert</label>
+		<input id="toggleAdvanced" type="checkbox" onclick="controls.toggleAdvanced();">
+		<span id="controlsAdvanced">
+			<label for="impulse" title="Impuls"><span class="more">Impuls </span>I</label>
+			<input type="range" id="impulse" min="1" max="100" value="10"/>
+			<label for="gravity" title="Gravitationsbeschleunigung"><span class="extra">Gravitationsbeschleunigung </span>g</label>
+			<input type="range" id="gravity" min="0" max="100" value="60"/>
+			<label for="friction" title="Kinetischer Reibungskoeffizient"><span class="extra">Kinetischer </span><span class="more">Reibung</span><span class="extra">skoeffizient</span> μ<sub>k</sub></label>
+			<input type="range" id="friction" min="0" max="100" value="20"/>
+			<label for="restitution" title="Stosszahl"><span class="more">Stosszahl </span>e</label>
+			<input type="range" id="restitution" min="1" max="100" value="25"/>
+		</span>
+	</div>
+	<div id="entities">
+		<h1>ISO 8601</h1>
+		<p>ISO 8601 ist ein von der Internationalen Organisation für Normung (ISO) entwickelter Standard für Datums- und Zeitangaben.</p>
+		<img style="width:130px;" src="iso-logo.gif"/>
+		<figcaption>Das Logo der ISO (Quelle: https://www.iso.org/iso-name-and-logo.html)</figcaption>
+		<h2>Formate</h2>
+		<p>ISO 8601 definiert diverse Formate. Hier zwei wichtige Beispiele:</p>
+		<table>
+			<tr><th>Beschreibung</th><th>Format</th><th>Beispiel</th></tr>
+			<tr><td>Datum</td><td class="inline">YYYY-MM-DD</td><td class="inline">2018-08-31</td></tr>
+			<tr><td>Zeit mit UTC-Differenz</td><td class="inline">HH:mm:ss±HH</td><td class="inline">23:46:03+02</td></tr>
+		</table>
+		<h2>Vorteile</h2>
+		<p>Das Verwenden eines standardisierten Formats für Datums- und Zeitangaben bringt mehrere Vorteile:</p>
+		<ul>
+			<li>Weniger Missverständnisse (z.B. Vertauschen von Tag und Monat)</li>
+			<li>Einfachere elektronische Datenverarbeitung, da das Format klar ist</li>
+			<li>Korrekte chronologische Anordnung von Dateinamen (Jahr kommt vor Monat kommt vor Tag)</li>
+		</ul>
+		<h2>Weiterführende Informationen</h2>
+		<p><span>ISO 8601 wird ausführlich</span> <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">im dazugehörigen Wikipedia-Artikel</a> <span>beschrieben.</span></p>
+	</div>
+	<script src="elphy.js"></script>
+</body>
+</html>
